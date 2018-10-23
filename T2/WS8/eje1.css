@@ -1,0 +1,39 @@
+   #carbonads { 
+          max-width: 300px; 
+          background: #f8f8f8;
+      }
+
+      .carbon-text { 
+          display: block; 
+          width: 130px; 
+      }
+
+      .carbon-poweredby { 
+          float: right; 
+      }
+      .carbon-text {
+          padding: 8px 0; 
+      }
+
+      #carbonads { 
+          padding: 15px;
+          border: 1px solid #ccc; 
+      }
+
+      .carbon-text {
+          font-size: 12px;
+          color: #333333;
+          text-decoration: none;
+      }
+
+
+      .carbon-poweredby {
+          font-size: 75%;
+          text-decoration: none;
+      }
+
+      #carbonads { 
+          position: fixed; 
+          top: 5px;
+          right: 5px;
+      }

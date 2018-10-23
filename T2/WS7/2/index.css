@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+ 
+#map {
+    height: 600px;
+    position: relative;
+    width: 100%;
+}
