@@ -9,16 +9,16 @@ var hueco;
 
 export class tresRaya{
 	constructor(){
-		this.a=false;
-		this.b=false;
-		this.hueco=false;
-		this.tablero = [];
-		this.finalizado = false;
-		this.turno1 = true;
-		this.fila;
-		this.columna;
-		this.crearTablero();
-		this.rellenarTablero();
+		this.a=false; // jugador 1
+		this.b=false; // jugador 2
+		this.hueco=false; // 
+		this.tablero = []; // un array con las posiciones del tablero 
+		this.finalizado = false; // el juego ha terminado, cuando esta a falso, el juego sigue funcionando, cuando esta a true, el juego ha terminado porque algun jugador ha ganado
+		this.turno1 = true; // variable para manejar los turnos, cuando esta en true le toca al jugador a, cuando es falso, juega el b
+		this.fila; // variable para introducir la fila
+		this.columna; // variable para introducir la columna
+		this.crearTablero(); // funcion que crea el tablero vacio
+		this.rellenarTablero(); // se usa para que recorra el tablero y lo rellene con huecos vacios.
 
 		
 	}
@@ -29,14 +29,14 @@ export class tresRaya{
 		for (var i = 0; i < 3; i++) {
 			this.tablero[i]= [];
 			for (var j = 0; j < 3; j++) {
-				this.tablero[i][j] = [];
+				this.tablero[i][j] = []; // rellenar el array vacio
 			}
 		}
 	}
 	rellenarTablero(){
 		for (var i = 0; i < 3; i++) {
 			for (var j = 0; j < 3; j++) {
-				this.tablero[i][j] = 0;
+				this.tablero[i][j] = 0; // rellena el array con huecos vacios, y se usa el 0 para ello. 
 			}
 		}
 	}
