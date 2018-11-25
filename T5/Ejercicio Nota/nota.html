@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notas</title>
+    <script src="nota1.js"></script>
+    <style>
+        .nota{
+            width: 15em;
+            height: 15em;
+            border: 2px solid #F3F781;
+            background-color:#F3F781;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            
+        }
+        h1{
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        h2{
+            text-align: justify;
+        }
+        p{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="panelNotas"></div>
+    <br>
+    <br>
+    <label>Titulo:</label>
+    <input type="text" id="tituloN">
+    <label>Texto:</label>
+    <input type="text" id="textoN">
+    <input type="button" value="Nueva Nota" id="boton" onclick="crearNota()">
+
+</body>
+</html>
