@@ -4,6 +4,23 @@ class Nota{
         this.titulo = titulo;
         this.texto = texto;
         this.fecha = new Date();
+        this.hora = new Date().getHours() + ":" + new Date().getMinutes();
+        this.timestamp = new Date().getTime();
+    }
+}
+
+if (localStorage.getItem("array") != null){
+    arrayNotas = JSON.parse(localStorage.getItem("array"));
+    todasNotas(arrayNotas);
+}
+
+function todasNotas(notas){
+    localStorage.setItem("array", JSON.stringify(arrayNotas));
+    while (panel.firstChild) {
+        panel.removeChild(panel.firstChild);
+    }
+    for (var i=0;i<notas.length;i++){
+        panel.appendChild(vista(notas[i]));
     }
 }
 
@@ -11,7 +28,15 @@ function crearNota(){
     var tituloNota = document.getElementById("tituloN").value;
     var textoNota = document.getElementById("textoN").value;
     arrayNotas.push(new Nota(tituloNota,textoNota));
-   
+    localStorage.setItem("array", JSON.stringify(arrayNotas));
+    main();
+}
+
+function borrarNota(){
+    var index = document.getElementById("nborrar").value;
+    if (index > -1) {
+        arrayNotas.splice(index, 1);
+    }
     main();
 }
 
