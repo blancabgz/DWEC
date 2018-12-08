@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BANDEJA>
+<CORREO>
+    <REMITENTE>lucia@gmail.com</REMITENTE>
+    <ASUNTO>Asunto de prueba</ASUNTO>
+</CORREO>
+<CORREO>
+    <REMITENTE>lucia@gmail.com</REMITENTE>
+    <ASUNTO>Asunto de prueba</ASUNTO>
+</CORREO>
+
+</BANDEJA>

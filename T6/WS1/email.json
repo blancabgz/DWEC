@@ -1,0 +1,16 @@
+{
+    "correo":[
+        {
+            "remitente":"lucia@gmail.com",
+            "asunto":"Asunto de prueba"
+        },
+        {
+            "remitente":"maria@gmail.com",
+            "asunto":"Asunto de prueba2"
+        },
+        {
+            "remitente":"rosa@gmail.com",
+            "asunto":"Asunto de prueba23"
+        }
+    ]
+}
