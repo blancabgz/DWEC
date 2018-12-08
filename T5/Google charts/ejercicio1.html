@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        function drawChart(){
+            var data = google.visualization.arrayToDataTable([
+                ['Partido', 'Votos'],
+                ['PP',     137],
+                ['PSOE',    85],
+                ['Unidos Podemos',  45],
+                ['Cs', 32],
+                ['ERC-CATSÍ',  9],
+                ['Podemos-En Marea-Anova-EU',  12],
+                ['CDC',  8],
+                ['EAJ-PNV',  5],
+                ['EH Bildu',  8]
+            ]);
+
+            var options = {
+             title: 'Resultados elecciones congreso diputados 2016'
+            };
+            
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+
+
+        }
+    
+    </script>
+
+    <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Partido", "Votos", { role: "style" } ],
+        ["PP", 137, "blue"],
+        ['PSOE',    85, "red"],
+        ['Unidos Podemos',  45, "violet"],
+        ['Cs', 32, "color: #DF3A01"],
+        ['Podemos-En Marea-Anova-EU',  12, "color: darkblue"],
+        ['ERC-CATSÍ',  9, "color: #F7FE2E"],
+        
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Resultados elecciones congreso diputados 2016",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+
+<script type="text/javascript">
+    google.charts.load('current', {
+      'packages':['geochart'],
+      'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Popularity'],
+        ['France', 82.6],
+        ['United States', 75.6],
+        ['Spain', 75.6],
+        ['China', 59.3],
+        ['Italy', 52.4],
+        ['RU', 35.6]
+      ]);
+
+      var options = {
+       
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+</head>
+<body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>        
+    <div id="barchart_values" style="width: 900px; height: 300px;"></div>
+    <br><br><br>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+
+</body>
+</html>
